@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - EduAccess India</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>EduAccess India</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="scholarships.html" class="nav-link">Scholarships</a>
+                    <div class="dropdown-menu">
+                        <a href="scholarships.html#national-scholarships" class="dropdown-item">
+                            <i class="fas fa-flag"></i>
+                            National & Central Scholarships
+                        </a>
+                        <a href="scholarships.html#state-scholarships" class="dropdown-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            State Scholarships
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="loans.html" class="nav-link">Loans</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pathways.html" class="nav-link">Pathways</a>
+                </li>
+                <li class="nav-item">
+                    <a href="resources.html" class="nav-link">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Get in Touch</h1>
+            <p>Have questions about scholarships, need guidance, or want to partner with us? We're here to help!</p>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>info@eduaccessindia.org</p>
+                    <p>support@eduaccessindia.org</p>
+                    <p>partnerships@eduaccessindia.org</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>+91 (11) 1234-5678</p>
+                    <p>+91 (11) 1234-5679</p>
+                    <p>Mon-Fri: 9:00 AM - 6:00 PM IST</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Visit Us</h3>
+                    <p>EduAccess India</p>
+                    <p>123 Education Street</p>
+                    <p>New Delhi - 110001, India</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Office Hours</h3>
+                    <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                    <p>Saturday: 10:00 AM - 2:00 PM</p>
+                    <p>Sunday: Closed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-form-container">
+                    <h2>Send Us a Message</h2>
+                    <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="scholarship">Scholarship Information</option>
+                                <option value="pathway">Education Pathways</option>
+                                <option value="partnership">Partnership Opportunities</option>
+                                <option value="technical">Technical Support</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="feedback">Feedback & Suggestions</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Please describe your inquiry in detail..." required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="category">I am a:</label>
+                            <select id="category" name="category">
+                                <option value="">Select category</option>
+                                <option value="student">Student</option>
+                                <option value="parent">Parent</option>
+                                <option value="teacher">Teacher/Educator</option>
+                                <option value="counselor">Career Counselor</option>
+                                <option value="ngo">NGO Representative</option>
+                                <option value="foundation">Foundation Representative</option>
+                                <option value="university">University Representative</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="newsletter" value="yes">
+                                <span class="checkmark"></span>
+                                Subscribe to our newsletter for updates on new scholarships and opportunities
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                
+                <div class="contact-sidebar">
+                    <div class="sidebar-section">
+                        <h3>Quick Contact</h3>
+                        <div class="quick-contact-item">
+                            <i class="fas fa-question-circle"></i>
+                            <div>
+                                <h4>General Questions</h4>
+                                <p>info@eduaccessindia.org</p>
+                            </div>
+                        </div>
+                        <div class="quick-contact-item">
+                            <i class="fas fa-hands-helping"></i>
+                            <div>
+                                <h4>Partnerships</h4>
+                                <p>partnerships@eduaccessindia.org</p>
+                            </div>
+                        </div>
+                        <div class="quick-contact-item">
+                            <i class="fas fa-tools"></i>
+                            <div>
+                                <h4>Technical Support</h4>
+                                <p>support@eduaccessindia.org</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-section">
+                        <h3>Office Locations</h3>
+                        <div class="office-location">
+                            <h4>Head Office - New Delhi</h4>
+                            <p><i class="fas fa-map-marker-alt"></i> 123 Education Street, New Delhi - 110001</p>
+                            <p><i class="fas fa-phone"></i> +91 (11) 1234-5678</p>
+                        </div>
+                        <div class="office-location">
+                            <h4>Regional Office - Mumbai</h4>
+                            <p><i class="fas fa-map-marker-alt"></i> 456 Learning Avenue, Mumbai - 400001</p>
+                            <p><i class="fas fa-phone"></i> +91 (22) 1234-5678</p>
+                        </div>
+                        <div class="office-location">
+                            <h4>Regional Office - Bangalore</h4>
+                            <p><i class="fas fa-map-marker-alt"></i> 789 Knowledge Road, Bangalore - 560001</p>
+                            <p><i class="fas fa-phone"></i> +91 (80) 1234-5678</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How can I find scholarships that match my profile?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Use our advanced search and filtering system on the Scholarships page. You can filter by class level, income group, state, and field of study to find the most relevant opportunities.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Are all the scholarships on your platform verified?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we verify all scholarship information with official sources before listing them. We regularly update deadlines and requirements to ensure accuracy.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How can I apply for scholarships through your platform?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We provide information and guidance about scholarships, but applications are submitted directly to the scholarship providers. We offer sample forms and application tips to help you.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you provide career counseling services?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer career counseling and can connect you with mentors and career counselors. Visit our Pathways page to learn more about our mentorship programs.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How can my organization partner with EduAccess India?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We welcome partnerships with foundations, NGOs, universities, and government bodies. Please email us at partnerships@eduaccessindia.org with your proposal.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is your platform free to use?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, all our information and tools are completely free to use. We believe in democratizing access to education information.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media & Newsletter -->
+    <section class="social-newsletter-section">
+        <div class="container">
+            <div class="social-newsletter-content">
+                <div class="social-section">
+                    <h3>Connect With Us</h3>
+                    <p>Follow us on social media for the latest updates on scholarships, success stories, and educational opportunities.</p>
+                    <div class="social-links-large">
+                        <a href="#" class="social-link facebook">
+                            <i class="fab fa-facebook-f"></i>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="#" class="social-link twitter">
+                            <i class="fab fa-twitter"></i>
+                            <span>Twitter</span>
+                        </a>
+                        <a href="#" class="social-link linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="#" class="social-link instagram">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="#" class="social-link youtube">
+                            <i class="fab fa-youtube"></i>
+                            <span>YouTube</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="newsletter-section">
+                    <h3>Stay Updated</h3>
+                    <p>Subscribe to our newsletter for monthly updates on new scholarships, deadlines, and educational opportunities.</p>
+                    <form class="newsletter-form">
+                        <div class="newsletter-input">
+                            <input type="email" placeholder="Enter your email address" required>
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </div>
+                        <p class="newsletter-note">We respect your privacy. Unsubscribe at any time.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>EduAccess India</h3>
+                    <p>Breaking barriers to education, one student at a time.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="scholarships.html">Scholarships</a></li>
+                        <li><a href="loans.html">Loans</a></li>
+                        <li><a href="pathways.html">Pathways</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="resources.html#calculator">Scholarship Calculator</a></li>
+                        <li><a href="resources.html#tracker">Deadline Tracker</a></li>
+                        <li><a href="resources.html#map">Education Map</a></li>
+                        <li><a href="resources.html#help">Application Help</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 EduAccess India. All rights reserved. | Empowering Education Access Across India</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

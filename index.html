@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduAccess India - Your Gateway to Education Opportunities</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>EduAccess India</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="scholarships.html" class="nav-link">Scholarships</a>
+                    <div class="dropdown-menu">
+                        <a href="scholarships.html#national-scholarships" class="dropdown-item">
+                            <i class="fas fa-flag"></i>
+                            National & Central Scholarships
+                        </a>
+                        <a href="scholarships.html#state-scholarships" class="dropdown-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            State Scholarships
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="loans.html" class="nav-link">Loans</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pathways.html" class="nav-link">Pathways</a>
+                </li>
+                <li class="nav-item">
+                    <a href="resources.html" class="nav-link">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a href="faq.html" class="nav-link">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Breaking Barriers to Education in India</h1>
+                <p class="hero-description">
+                    Discover scholarships, alternative pathways, and success stories that make higher education accessible to every Indian student. 
+                    From government schemes to private foundations, find your path to success.
+                </p>
+                <div class="hero-buttons">
+                    <a href="scholarships.html" class="btn btn-primary">Find Scholarships</a>
+                    <a href="pathways.html" class="btn btn-secondary">Explore Pathways</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">5000+</span>
+                        <span class="stat-label">Scholarships</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Foundations</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">Success Stories</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-graphic">
+                    <i class="fas fa-graduation-cap"></i>
+                    <div class="india-map-overlay">
+                        <div class="map-dot" style="top: 20%; left: 30%;"></div>
+                        <div class="map-dot" style="top: 40%; left: 60%;"></div>
+                        <div class="map-dot" style="top: 60%; left: 45%;"></div>
+                        <div class="map-dot" style="top: 80%; left: 70%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Access Section -->
+    <section class="quick-access">
+        <div class="container">
+            <div class="quick-access-grid">
+                <div class="quick-access-card">
+                    <i class="fas fa-search"></i>
+                    <h3>Find Scholarships</h3>
+                    <p>Search through 5000+ scholarships from government, private foundations, and universities</p>
+                    <a href="scholarships.html" class="btn btn-outline">Search Now</a>
+                </div>
+                <div class="quick-access-card">
+                    <i class="fas fa-calculator"></i>
+                    <h3>EMI Calculator</h3>
+                    <p>Calculate your education loan EMIs and plan your finances</p>
+                    <a href="loans.html" class="btn btn-outline">Calculate</a>
+                </div>
+                <div class="quick-access-card">
+                    <i class="fas fa-university"></i>
+                    <h3>Loan Hub</h3>
+                    <p>Explore education loan options from government schemes and private lenders</p>
+                    <a href="loans.html" class="btn btn-outline">Explore Loans</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scholarships Section -->
+    <section id="scholarships" class="scholarships">
+        <div class="container">
+            <h2 class="section-title">Scholarships & Financial Aid</h2>
+            <div class="scholarship-categories">
+                <div class="category-tabs">
+                    <button class="tab-btn active" data-category="government">Government Schemes</button>
+                    <button class="tab-btn" data-category="foundations">Private Foundations</button>
+                    <button class="tab-btn" data-category="universities">University Scholarships</button>
+                    <button class="tab-btn" data-category="corporate">Corporate CSR</button>
+                </div>
+                
+                <div class="search-filter-section">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search scholarships by name, field, or location...">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="filters">
+                        <select class="filter-select">
+                            <option value="">Class Level</option>
+                            <option value="10th">Class 10th</option>
+                            <option value="12th">Class 12th</option>
+                            <option value="ug">Undergraduate</option>
+                            <option value="pg">Postgraduate</option>
+                            <option value="phd">PhD</option>
+                        </select>
+                        <select class="filter-select">
+                            <option value="">Income Group</option>
+                            <option value="low">Low Income</option>
+                            <option value="middle">Middle Income</option>
+                            <option value="all">All Income Groups</option>
+                        </select>
+                        <select class="filter-select">
+                            <option value="">State</option>
+                            <option value="maharashtra">Maharashtra</option>
+                            <option value="bihar">Bihar</option>
+                            <option value="tamilnadu">Tamil Nadu</option>
+                            <option value="karnataka">Karnataka</option>
+                            <option value="all">All States</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="scholarships-grid">
+                    <div class="scholarship-card" data-category="government">
+                        <div class="scholarship-header">
+                            <h3>National Scholarship Portal (NSP)</h3>
+                            <span class="scholarship-type government">Government</span>
+                        </div>
+                        <p>Central government scholarships for SC, ST, OBC, and minority students</p>
+                        <div class="scholarship-details">
+                            <span><i class="fas fa-rupee-sign"></i> Up to ₹20,000/year</span>
+                            <span><i class="fas fa-calendar"></i> Deadline: Aug 31</span>
+                        </div>
+                        <a href="#" class="btn btn-outline">Learn More</a>
+                    </div>
+
+                    <div class="scholarship-card" data-category="foundations">
+                        <div class="scholarship-header">
+                            <h3>Tata Trusts Scholarship</h3>
+                            <span class="scholarship-type foundation">Foundation</span>
+                        </div>
+                        <p>Merit-based scholarships for engineering and medical students</p>
+                        <div class="scholarship-details">
+                            <span><i class="fas fa-rupee-sign"></i> Up to ₹2,00,000/year</span>
+                            <span><i class="fas fa-calendar"></i> Deadline: May 15</span>
+                        </div>
+                        <a href="#" class="btn btn-outline">Learn More</a>
+                    </div>
+
+                    <div class="scholarship-card" data-category="foundations">
+                        <div class="scholarship-header">
+                            <h3>Mahindra All India Talent Scholarship</h3>
+                            <span class="scholarship-type foundation">Foundation</span>
+                        </div>
+                        <p>Scholarships for students from low-income families pursuing technical education</p>
+                        <div class="scholarship-details">
+                            <span><i class="fas fa-rupee-sign"></i> Up to ₹1,00,000/year</span>
+                            <span><i class="fas fa-calendar"></i> Deadline: Jun 30</span>
+                        </div>
+                        <a href="#" class="btn btn-outline">Learn More</a>
+                    </div>
+
+                    <div class="scholarship-card" data-category="universities">
+                        <div class="scholarship-header">
+                            <h3>Ashoka University Merit Scholarship</h3>
+                            <span class="scholarship-type university">University</span>
+                        </div>
+                        <p>Merit-based scholarships for outstanding students at Ashoka University</p>
+                        <div class="scholarship-details">
+                            <span><i class="fas fa-rupee-sign"></i> Up to 100% tuition waiver</span>
+                            <span><i class="fas fa-calendar"></i> Deadline: Mar 15</span>
+                        </div>
+                        <a href="#" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pathways Section -->
+    <section id="pathways" class="pathways">
+        <div class="container">
+            <h2 class="section-title">Education Pathways Beyond Traditional Routes</h2>
+            <div class="pathways-grid">
+                <div class="pathway-card">
+                    <div class="pathway-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Skill Development & Vocational Training</h3>
+                    <p>Explore NSDC courses, ITI programs, and skill-based certifications that lead to immediate employment</p>
+                    <ul class="pathway-features">
+                        <li>NSDC Skill India Programs</li>
+                        <li>ITI Technical Courses</li>
+                        <li>Industry Certifications</li>
+                        <li>Apprenticeship Programs</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">Explore Skills</a>
+                </div>
+
+                <div class="pathway-card">
+                    <div class="pathway-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Online Learning & MOOCs</h3>
+                    <p>Access world-class education through online platforms and open universities</p>
+                    <ul class="pathway-features">
+                        <li>SWAYAM Courses</li>
+                        <li>NPTEL Programs</li>
+                        <li>Open Universities</li>
+                        <li>International MOOCs</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">Start Learning</a>
+                </div>
+
+                <div class="pathway-card">
+                    <div class="pathway-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Alternative Career Paths</h3>
+                    <p>Discover emerging careers in AI, sustainability, policy, and design</p>
+                    <ul class="pathway-features">
+                        <li>AI & Machine Learning</li>
+                        <li>Sustainability & Green Tech</li>
+                        <li>Policy & Governance</li>
+                        <li>Creative Design Fields</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">Explore Careers</a>
+                </div>
+
+                <div class="pathway-card">
+                    <div class="pathway-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Mentorship & Networking</h3>
+                    <p>Connect with successful alumni and industry professionals for guidance</p>
+                    <ul class="pathway-features">
+                        <li>Alumni Mentorship</li>
+                        <li>Industry Connect</li>
+                        <li>Career Counseling</li>
+                        <li>Networking Events</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">Find Mentor</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section id="stories" class="stories">
+        <div class="container">
+            <h2 class="section-title">Success Stories: Real People, Real Impact</h2>
+            <div class="stories-grid">
+                <div class="story-card">
+                    <div class="story-image">
+                        <img src="https://via.placeholder.com/300x200/667eea/ffffff?text=Student+Story" alt="Student Success Story">
+                    </div>
+                    <div class="story-content">
+                        <h3>Priya Sharma - From Village to IIT</h3>
+                        <p class="story-location"><i class="fas fa-map-marker-alt"></i> Bihar → IIT Bombay</p>
+                        <p class="story-summary">How a Tata Trust scholarship transformed Priya's life from a small village in Bihar to studying Computer Science at IIT Bombay.</p>
+                        <div class="story-tags">
+                            <span class="tag">Tata Trust</span>
+                            <span class="tag">IIT</span>
+                            <span class="tag">Engineering</span>
+                        </div>
+                        <a href="#" class="btn btn-outline">Read Full Story</a>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-image">
+                        <img src="https://via.placeholder.com/300x200/764ba2/ffffff?text=Alumni+Story" alt="Alumni Success Story">
+                    </div>
+                    <div class="story-content">
+                        <h3>Rahul Kumar - Skill Development Success</h3>
+                        <p class="story-location"><i class="fas fa-map-marker-alt"></i> UP → IT Professional</p>
+                        <p class="story-summary">Rahul's journey from a small town in UP to becoming a successful IT professional through NSDC skill development programs.</p>
+                        <div class="story-tags">
+                            <span class="tag">NSDC</span>
+                            <span class="tag">Skill Development</span>
+                            <span class="tag">IT</span>
+                        </div>
+                        <a href="#" class="btn btn-outline">Read Full Story</a>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-image">
+                        <img src="https://via.placeholder.com/300x200/2c3e50/ffffff?text=Foundation+Story" alt="Foundation Impact Story">
+                    </div>
+                    <div class="story-content">
+                        <h3>Mahindra Foundation - Empowering 10,000+ Students</h3>
+                        <p class="story-location"><i class="fas fa-map-marker-alt"></i> Pan India Impact</p>
+                        <p class="story-summary">Discover how Mahindra Foundation's scholarship program has transformed the lives of thousands of students across India.</p>
+                        <div class="story-tags">
+                            <span class="tag">Mahindra</span>
+                            <span class="tag">Foundation</span>
+                            <span class="tag">Impact</span>
+                        </div>
+                        <a href="#" class="btn btn-outline">Read Full Story</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Tools Section -->
+    <section id="resources" class="resources">
+        <div class="container">
+            <h2 class="section-title">Interactive Tools & Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Interactive India Education Map</h3>
+                    <p>Explore education opportunities state-wise: local scholarships, government schemes, colleges, and NGOs</p>
+                    <div class="resource-features">
+                        <span>State-wise Data</span>
+                        <span>Local Scholarships</span>
+                        <span>NGO Directory</span>
+                    </div>
+                    <a href="#" class="btn btn-primary">Explore Map</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Scholarship Eligibility Calculator</h3>
+                    <p>Calculate your eligibility for various scholarships based on your profile and background</p>
+                    <div class="resource-features">
+                        <span>Income Assessment</span>
+                        <span>Merit Evaluation</span>
+                        <span>Match Results</span>
+                    </div>
+                    <a href="#" class="btn btn-primary">Calculate Now</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Application Deadline Tracker</h3>
+                    <p>Never miss important deadlines with personalized reminders and calendar integration</p>
+                    <div class="resource-features">
+                        <span>Personalized Alerts</span>
+                        <span>Calendar Sync</span>
+                        <span>Progress Tracking</span>
+                    </div>
+                    <a href="#" class="btn btn-primary">Track Deadlines</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Application Help Zone</h3>
+                    <p>Sample forms, essay tips, SOP guides, and common application mistakes to avoid</p>
+                    <div class="resource-features">
+                        <span>Sample Forms</span>
+                        <span>Essay Tips</span>
+                        <span>Mistake Guide</span>
+                    </div>
+                    <a href="#" class="btn btn-primary">Get Help</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About EduAccess India</h2>
+                    <p>
+                        EduAccess India is a comprehensive platform dedicated to breaking down barriers to education 
+                        in India. We believe that every student, regardless of their economic background or location, 
+                        deserves access to quality education and opportunities.
+                    </p>
+                    <p>
+                        Our mission is to democratize access to education by providing comprehensive information about 
+                        scholarships, alternative pathways, and success stories. We work with government bodies, private 
+                        foundations, universities, and NGOs to create a one-stop solution for education access.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>5000+</h3>
+                            <p>Scholarships</p>
+                        </div>
+                        <div class="stat">
+                            <h3>50+</h3>
+                            <p>Partner Foundations</p>
+                        </div>
+                        <div class="stat">
+                            <h3>1000+</h3>
+                            <p>Success Stories</p>
+                        </div>
+                        <div class="stat">
+                            <h3>25+</h3>
+                            <p>States Covered</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-graphic">
+                        <i class="fas fa-india"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@eduaccessindia.org</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 (11) 1234-5678</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>New Delhi, India</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Mon-Fri: 9:00 AM - 6:00 PM IST</span>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>EduAccess India</h3>
+                    <p>Breaking barriers to education, one student at a time.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#scholarships">Scholarships</a></li>
+                        <li><a href="#pathways">Pathways</a></li>
+                        <li><a href="#stories">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#calculator">Scholarship Calculator</a></li>
+                        <li><a href="#tracker">Deadline Tracker</a></li>
+                        <li><a href="#map">Education Map</a></li>
+                        <li><a href="#help">Application Help</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 EduAccess India. All rights reserved. | Empowering Education Access Across India</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

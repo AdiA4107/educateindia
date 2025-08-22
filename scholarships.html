@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarships & Financial Aid - EduAccess India</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>EduAccess India</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="scholarships.html" class="nav-link active">Scholarships</a>
+                    <div class="dropdown-menu">
+                        <a href="#national-scholarships" class="dropdown-item">
+                            <i class="fas fa-flag"></i>
+                            National & Central Scholarships
+                        </a>
+                        <a href="#state-scholarships" class="dropdown-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            State Scholarships
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="loans.html" class="nav-link">Loans</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pathways.html" class="nav-link">Pathways</a>
+                </li>
+                <li class="nav-item">
+                    <a href="resources.html" class="nav-link">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a href="faq.html" class="nav-link">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Scholarships & Financial Aid</h1>
+            <p>Discover <span id="totalScholarships">51+</span> verified scholarships from government schemes, private foundations, universities, and corporate CSR programs</p>
+            <div class="header-stats">
+                <div class="stat-item">
+                    <span class="stat-number" id="govtCount">0</span>
+                    <span class="stat-label">States Covered</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="foundationCount">0</span>
+                    <span class="stat-label">Total Scholarships</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="corporateCount">0</span>
+                    <span class="stat-label">Total Amount</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scholarship Categories -->
+    <section class="scholarship-categories-section">
+        <div class="container">
+            <div class="category-tabs">
+                <button class="tab-btn active" data-category="all">All Scholarships (<span id="allCount">51</span>)</button>
+                <button class="tab-btn" data-category="government">States Covered (<span id="governmentCount">0</span>)</button>
+                <button class="tab-btn" data-category="foundation">Total Scholarships (<span id="foundationCount">0</span>)</button>
+                <button class="tab-btn" data-category="corporate">Total Amount (<span id="corporateCount">0</span>)</button>
+            </div>
+            
+            <!-- Quick Navigation -->
+            <div class="quick-navigation">
+                <div class="nav-item">
+                    <a href="#national-scholarships" class="nav-link">
+                        <i class="fas fa-flag"></i>
+                        National & Central Scholarships
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#state-scholarships" class="nav-link">
+                        <i class="fas fa-map-marker-alt"></i>
+                        State Scholarships
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search and Filters -->
+    <section class="search-filters-section">
+        <div class="container">
+            <div class="search-filter-container">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search scholarships by name, field, or location...">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="filters">
+                    <select class="filter-select" id="academicLevel">
+                        <option value="">Academic Level</option>
+                        <option value="Class 11">Class 11</option>
+                        <option value="Class 12">Class 12</option>
+                        <option value="UG">Undergraduate</option>
+                        <option value="PG">Postgraduate</option>
+                        <option value="PhD">PhD</option>
+                        <option value="Diploma">Diploma</option>
+                    </select>
+                    <select class="filter-select" id="beneficiaryType">
+                        <option value="">Beneficiary Type</option>
+                        <option value="SC">SC</option>
+                        <option value="ST">ST</option>
+                        <option value="OBC">OBC</option>
+                        <option value="Girls">Girls</option>
+                        <option value="Merit">Merit-based</option>
+                        <option value="PwD">Persons with Disabilities</option>
+                        <option value="Minority">Minority</option>
+                    </select>
+                    <select class="filter-select" id="coverage">
+                        <option value="">Coverage</option>
+                        <option value="India">Pan India</option>
+                        <option value="West Bengal">West Bengal</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="Bihar">Bihar</option>
+                    </select>
+                    <select class="filter-select" id="deadline">
+                        <option value="">Deadline</option>
+                        <option value="urgent">Urgent (Within 30 days)</option>
+                        <option value="soon">Soon (Within 3 months)</option>
+                        <option value="later">Later (3+ months)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scholarships Grid -->
+    <section class="scholarships-grid-section">
+        <div class="container">
+            <div class="scholarships-grid" id="scholarshipsGrid">
+                <!-- Scholarships will be dynamically loaded here -->
+                <div class="loading-message">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Loading scholarships...</p>
+                </div>
+            </div>
+            
+            <!-- No Results Message -->
+            <div class="no-results" id="noResults" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3>No scholarships found</h3>
+                <p>Try adjusting your search criteria or filters</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- State-Specific Scholarships Section -->
+    <section class="state-scholarships-section" id="state-scholarships">
+        <div class="container">
+            <h2 class="section-title">State-Specific Scholarships</h2>
+            <p class="section-subtitle">Explore scholarships available in different states across India</p>
+            
+            <div class="state-scholarships-grid" id="stateScholarshipsGrid">
+                <!-- State scholarship cards will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Scholarship Application Guide -->
+    <section class="application-guide-section">
+        <div class="container">
+            <h2 class="section-title">How to Apply for Scholarships</h2>
+            <div class="guide-steps">
+                <div class="guide-step">
+                    <div class="step-number">1</div>
+                    <h3>Check Eligibility</h3>
+                    <p>Review the scholarship criteria including academic requirements, income limits, and documentation needed</p>
+                </div>
+                <div class="guide-step">
+                    <div class="step-number">2</div>
+                    <h3>Prepare Documents</h3>
+                    <p>Gather all required documents like income certificates, caste certificates, mark sheets, and photographs</p>
+                </div>
+                <div class="guide-step">
+                    <div class="step-number">3</div>
+                    <h3>Fill Application</h3>
+                    <p>Complete the application form carefully, ensuring all information is accurate and complete</p>
+                </div>
+                <div class="guide-step">
+                    <div class="step-number">4</div>
+                    <h3>Submit & Track</h3>
+                    <p>Submit your application before the deadline and keep track of your application status</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>EduAccess India</h3>
+                    <p>Breaking barriers to education, one student at a time.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="scholarships.html">Scholarships</a></li>
+                        <li><a href="loans.html">Loans</a></li>
+                        <li><a href="pathways.html">Pathways</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="resources.html#calculator">Scholarship Calculator</a></li>
+                        <li><a href="resources.html#tracker">Deadline Tracker</a></li>
+                        <li><a href="resources.html#map">Education Map</a></li>
+                        <li><a href="resources.html#help">Application Help</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 EduAccess India. All rights reserved. | Empowering Education Access Across India</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="scholarships-data.js"></script>
+    <script>
+        // Smooth scrolling for quick navigation links
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.quick-navigation .nav-link');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+
+        });
+    </script>
+</body>
+</html> 

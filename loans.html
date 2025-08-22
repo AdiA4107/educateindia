@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Loans & EMI Calculator - EduAccess India</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>EduAccess India</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="scholarships.html" class="nav-link">Scholarships</a>
+                    <div class="dropdown-menu">
+                        <a href="scholarships.html#national-scholarships" class="dropdown-item">
+                            <i class="fas fa-flag"></i>
+                            National & Central Scholarships
+                        </a>
+                        <a href="scholarships.html#state-scholarships" class="dropdown-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            State Scholarships
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="loans.html" class="nav-link active">Loans</a>
+                    <div class="dropdown-menu">
+                        <a href="#emi-calculator" class="dropdown-item">
+                            <i class="fas fa-calculator"></i>
+                            EMI Calculator
+                        </a>
+                        <a href="#government-schemes" class="dropdown-item">
+                            <i class="fas fa-shield-alt"></i>
+                            Government Education Loan Schemes
+                        </a>
+                        <a href="#loan-types" class="dropdown-item">
+                            <i class="fas fa-university"></i>
+                            Different Types of Loans
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="pathways.html" class="nav-link">Pathways</a></li>
+                <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
+                <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section loans-hero">
+        <div class="hero-content">
+            <h1>Education Loans & Financial Aid</h1>
+            <p>Access quality education with flexible loan options and smart financial planning tools</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <h3>₹70,282 Cr</h3>
+                    <p>Total Loans Disbursed (2023-14)</p>
+                </div>
+                <div class="stat-item">
+                    <h3>4.33 Cr</h3>
+                    <p>Students Enrolled (2021-22)</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24%</h3>
+                    <p>NBFC Market Share</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EMI Calculator Section -->
+    <section class="emi-calculator-section" id="emi-calculator">
+        <div class="container">
+            <h2 class="section-title">EMI Calculator</h2>
+            <div class="calculator-container">
+                <!-- Input Fields (Left Column) -->
+                <div class="calculator-inputs">
+                    <div class="input-group">
+                        <label for="loanAmount">Amount (₹)</label>
+                        <div class="input-with-slider">
+                            <input type="number" id="loanAmount" value="5245000" min="10000" max="10000000" step="10000">
+                            <span class="formatted-value">5,245,000</span>
+                        </div>
+                        <input type="range" id="amountSlider" min="10000" max="10000000" value="5245000" step="10000" class="slider">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="loanYears">No of Years</label>
+                        <div class="input-with-slider">
+                            <input type="number" id="loanYears" value="26" min="1" max="30" step="1">
+                            <span class="formatted-value">26 years</span>
+                        </div>
+                        <input type="range" id="yearsSlider" min="1" max="30" value="26" step="1" class="slider">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="interestRate">% Interest</label>
+                        <div class="input-with-slider">
+                            <input type="number" id="interestRate" value="7.5" min="5" max="20" step="0.1">
+                            <span class="formatted-value">7.5%</span>
+                        </div>
+                        <input type="range" id="interestSlider" min="5" max="20" value="7.5" step="0.1" class="slider">
+                    </div>
+
+                    <!-- Calculated Results -->
+                    <div class="calculation-results">
+                        <div class="result-item monthly-payable">
+                            <label>Monthly Payable:</label>
+                            <span class="result-value">₹ 38,257 /mo</span>
+                        </div>
+                        <div class="result-item">
+                            <label>Principal:</label>
+                            <span class="result-value">₹ 5,245,000</span>
+                        </div>
+                        <div class="result-item">
+                            <label>Interest:</label>
+                            <span class="result-value">₹ 6,691,315</span>
+                        </div>
+                        <div class="result-item">
+                            <label>Total Payable:</label>
+                            <span class="result-value">₹ 11,936,315</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Breakup Chart (Right Column) -->
+                <div class="calculator-chart">
+                    <h3>Payment Breakup</h3>
+                    <div class="chart-container">
+                        <canvas id="paymentChart"></canvas>
+                        <div class="chart-legend">
+                            <div class="legend-item">
+                                <span class="legend-color principal"></span>
+                                <span>Principal</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color interest"></span>
+                                <span>Interest</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Government Schemes Section -->
+    <section class="government-schemes-section" id="government-schemes">
+        <div class="container">
+            <h2 class="section-title">Government Education Loan Schemes</h2>
+            <p class="section-subtitle">Comprehensive government support to make education accessible for all students</p>
+            
+            <div class="schemes-grid">
+                <div class="scheme-card">
+                    <div class="scheme-header">
+                        <div class="scheme-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="scheme-title">
+                            <h3>Credit Guarantee Fund (CGFSEL)</h3>
+                            <p class="scheme-description">75% government guarantee on loans up to ₹7.5L without collateral</p>
+                        </div>
+                    </div>
+                    
+                    <div class="scheme-highlight">
+                        <div class="highlight-item">
+                            <span class="highlight-number">75%</span>
+                            <span class="highlight-label">Government Guarantee</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-number">₹7.5L</span>
+                            <span class="highlight-label">Max Coverage</span>
+                        </div>
+                    </div>
+                    
+                    <div class="scheme-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>No collateral required</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Available for all banks</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Risk reduction for lenders</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scheme-card">
+                    <div class="scheme-header">
+                        <div class="scheme-icon">
+                            <i class="fas fa-percentage"></i>
+                        </div>
+                        <div class="scheme-title">
+                            <h3>Central Sector Interest Subsidy (CSIS)</h3>
+                            <p class="scheme-description">Full interest subvention during study period for students with family income below ₹4.5L</p>
+                        </div>
+                    </div>
+                    
+                    <div class="scheme-highlight">
+                        <div class="highlight-item">
+                            <span class="highlight-number">100%</span>
+                            <span class="highlight-label">Interest Waiver</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-number">₹4.5L</span>
+                            <span class="highlight-label">Income Limit</span>
+                        </div>
+                    </div>
+                    
+                    <div class="scheme-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Full interest subvention</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>During study period</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>For economically weaker students</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scheme-card portal-card">
+                    <div class="scheme-header">
+                        <div class="scheme-icon">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                        <div class="scheme-title">
+                            <h3>PM Vidyalakshmi Portal</h3>
+                            <p class="scheme-description">Official Government Portal for Education Loan Applications</p>
+                        </div>
+                    </div>
+                    
+                    <div class="portal-info">
+                        <p class="portal-description">
+                            The PM Vidyalakshmi Portal is the Government of India's single-window platform for students seeking education loans. 
+                            It provides access to 38+ registered banks and 86+ loan schemes, making the application process transparent and student-friendly.
+                        </p>
+                        
+                        <div class="portal-highlights">
+                            <div class="highlight-item">
+                                <span class="highlight-number">38+</span>
+                                <span class="highlight-label">Registered Banks</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-number">86+</span>
+                                <span class="highlight-label">Loan Schemes</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-number">24/7</span>
+                                <span class="highlight-label">Online Access</span>
+                            </div>
+                        </div>
+                        
+                        <div class="portal-features">
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Single application form for multiple banks</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Real-time application tracking</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Interest subvention schemes</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>No processing fees</span>
+                            </div>
+                        </div>
+                        
+                        <div class="portal-action">
+                            <a href="https://www.vidyalakshmi.co.in/Students/index" target="_blank" class="btn btn-primary btn-large">
+                                <i class="fas fa-external-link-alt"></i>
+                                Visit Official Portal
+                            </a>
+                            <p class="portal-note">
+                                <i class="fas fa-info-circle"></i>
+                                This is the official Government of India portal. No payments are required for applications.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loan Types Comparison Section -->
+    <section class="loan-comparison-detailed-section" id="loan-types">
+        <div class="container">
+            <h2 class="section-title">Understanding Different Loan Types</h2>
+            <div class="comparison-tabs">
+                <button class="tab-btn active" data-tab="psb">Public Sector Banks</button>
+                <button class="tab-btn" data-tab="private">Private Banks</button>
+                <button class="tab-btn" data-tab="nbfc">NBFCs</button>
+            </div>
+
+            <div class="tab-content active" id="psb-content">
+                <div class="loan-type-details">
+                    <div class="loan-header">
+                        <div class="loan-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <div class="loan-title">
+                            <h3>Public Sector Banks (PSBs)</h3>
+                            <p class="loan-subtitle">Government-backed loans with subsidies and guarantees</p>
+                        </div>
+                    </div>
+                    
+                    <div class="loan-overview">
+                        <div class="overview-stats">
+                            <div class="stat">
+                                <span class="stat-number">₹7.5L</span>
+                                <span class="stat-label">Collateral-Free Limit</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">7.5% - 11.15%</span>
+                                <span class="stat-label">Interest Rate Range</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">15-30 days</span>
+                                <span class="stat-label">Processing Time</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="loan-features">
+                        <div class="features-section">
+                            <h4><i class="fas fa-check-circle text-success"></i> Advantages</h4>
+                            <ul class="feature-list">
+                                <li>Collateral-free loans up to ₹7.5L under government guarantee</li>
+                                <li>Lowest interest rates in the market</li>
+                                <li>Government subsidies available (CSIS & CGFSEL)</li>
+                                <li>No academic score requirements</li>
+                                <li>Flexible repayment options</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="features-section">
+                            <h4><i class="fas fa-times-circle text-danger"></i> Limitations</h4>
+                            <ul class="feature-list">
+                                <li>Longer processing time (15-30 days)</li>
+                                <li>Manual documentation and verification required</li>
+                                <li>Limited digital experience</li>
+                                <li>Higher NPA rates due to riskier borrowers</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="lender-examples">
+                        <h4>Major PSB Lenders</h4>
+                        <div class="lender-cards">
+                            <div class="lender-card">
+                                <div class="lender-name">State Bank of India (SBI)</div>
+                                <div class="lender-details">
+                                    <span class="rate">8.15% - 11.15%</span>
+                                    <span class="amount">Up to ₹1.5Cr (Study Abroad)</span>
+                                </div>
+                            </div>
+                            <div class="lender-card">
+                                <div class="lender-name">Punjab National Bank (PNB)</div>
+                                <div class="lender-details">
+                                    <span class="rate">Starting at 8.55%</span>
+                                    <span class="amount">Up to ₹20L (Study Abroad)</span>
+                                </div>
+                            </div>
+                            <div class="lender-card">
+                                <div class="lender-name">Bank of Baroda (BoB)</div>
+                                <div class="lender-details">
+                                    <span class="rate">7.90% - 11.70%</span>
+                                    <span class="amount">Up to ₹1.5Cr (Study Abroad)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="private-content">
+                <div class="loan-type-details">
+                    <div class="loan-header">
+                        <div class="loan-icon">
+                            <i class="fas fa-building-columns"></i>
+                        </div>
+                        <div class="loan-title">
+                            <h3>Private Sector Banks</h3>
+                            <p class="loan-subtitle">Efficient digital banking with higher loan amounts</p>
+                        </div>
+                    </div>
+                    
+                    <div class="loan-overview">
+                        <div class="overview-stats">
+                            <div class="stat">
+                                <span class="stat-number">₹1Cr+</span>
+                                <span class="stat-label">Max Loan Amount</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">10.5% - 15.2%</span>
+                                <span class="stat-label">Interest Rate Range</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">7-15 days</span>
+                                <span class="stat-label">Processing Time</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="loan-features">
+                        <div class="features-section">
+                            <h4><i class="fas fa-check-circle text-success"></i> Advantages</h4>
+                            <ul class="feature-list">
+                                <li>Faster processing and approval</li>
+                                <li>Higher loan amounts available</li>
+                                <li>Better digital experience and online services</li>
+                                <li>Flexible collateral options</li>
+                                <li>Premium customer service</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="features-section">
+                            <h4><i class="fas fa-times-circle text-danger"></i> Limitations</h4>
+                            <ul class="feature-list">
+                                <li>Higher interest rates compared to PSBs</li>
+                                <li>Stricter eligibility criteria</li>
+                                <li>Collateral requirements for larger amounts</li>
+                                <li>Higher processing fees</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="lender-examples">
+                        <h4>Major Private Bank Lenders</h4>
+                        <div class="lender-cards">
+                            <div class="lender-card">
+                                <div class="lender-name">ICICI Bank</div>
+                                <div class="lender-details">
+                                    <span class="rate">10.85% - 12%</span>
+                                    <span class="amount">Up to ₹1Cr</span>
+                                </div>
+                            </div>
+                            <div class="lender-card">
+                                <div class="lender-name">Axis Bank</div>
+                                <div class="lender-details">
+                                    <span class="rate">13.7% - 15.2%</span>
+                                    <span class="amount">Up to ₹1Cr</span>
+                                </div>
+                            </div>
+                            <div class="lender-card">
+                                <div class="lender-name">HDFC Bank</div>
+                                <div class="lender-details">
+                                    <span class="rate">Starting at 10.50%</span>
+                                    <span class="amount">Up to ₹3Cr</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="nbfc-content">
+                <div class="loan-type-details">
+                    <div class="loan-header">
+                        <div class="loan-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="loan-title">
+                            <h3>Non-Banking Financial Companies (NBFCs)</h3>
+                            <p class="loan-subtitle">Fast, digital-first lending with specialized education focus</p>
+                        </div>
+                    </div>
+                    
+                    <div class="loan-overview">
+                        <div class="overview-stats">
+                            <div class="stat">
+                                <span class="stat-number">₹1Cr+</span>
+                                <span class="stat-label">Max Loan Amount</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">9.5% - 14%</span>
+                                <span class="stat-label">Interest Rate Range</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">3-7 days</span>
+                                <span class="stat-label">Processing Time</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="loan-features">
+                        <div class="features-section">
+                            <h4><i class="fas fa-check-circle text-success"></i> Advantages</h4>
+                            <ul class="feature-list">
+                                <li>Fastest processing time (3-7 days)</li>
+                                <li>Completely online application process</li>
+                                <li>Lowest NPA rates in the industry</li>
+                                <li>Specialized education loan expertise</li>
+                                <li>Flexible repayment during moratorium</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="features-section">
+                            <h4><i class="fas fa-times-circle text-danger"></i> Limitations</h4>
+                            <ul class="feature-list">
+                                <li>Higher interest rates than PSBs</li>
+                                <li>Strict academic requirements and scores</li>
+                                <li>Higher co-applicant income requirements</li>
+                                <li>Limited government subsidies</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="lender-examples">
+                        <h4>Major NBFC Lenders</h4>
+                        <div class="lender-cards">
+                            <div class="lender-card">
+                                <div class="lender-name">Credila</div>
+                                <div class="lender-details">
+                                    <span class="rate">10.5% - 13%</span>
+                                    <span class="amount">Up to ₹75L</span>
+                                </div>
+                            </div>
+                            <div class="lender-card">
+                                <div class="lender-name">Avanse</div>
+                                <div class="lender-details">
+                                    <span class="rate">9.5% - 14%</span>
+                                    <span class="amount">Up to ₹50L</span>
+                                </div>
+                            </div>
+                            <div class="lender-card">
+                                <div class="lender-name">InCred</div>
+                                <div class="lender-details">
+                                    <span class="rate">10% - 13.5%</span>
+                                    <span class="amount">Up to ₹80L</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Insights Section -->
+    <section class="market-insights-section">
+        <div class="container">
+            <h2 class="section-title">Education Loan Market Insights</h2>
+            <p class="section-subtitle">Key statistics and trends shaping India's education loan landscape</p>
+            
+            <div class="insights-grid">
+                <div class="insight-card">
+                    <div class="insight-header">
+                        <div class="insight-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="insight-title">
+                            <h3>Market Growth</h3>
+                            <p>Rapid expansion of education financing</p>
+                        </div>
+                    </div>
+                    
+                    <div class="insight-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-number">26.5%</div>
+                            <div class="highlight-label">GER Increase</div>
+                            <div class="highlight-period">2014-22</div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-number">24%</div>
+                            <div class="highlight-label">NBFC Market Share</div>
+                            <div class="highlight-period">Current</div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-number">43.3%</div>
+                            <div class="highlight-label">NBFC Growth Rate</div>
+                            <div class="highlight-period">Annual</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="insight-card">
+                    <div class="insight-header">
+                        <div class="insight-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <div class="insight-title">
+                            <h3>Performance Comparison</h3>
+                            <p>Asset quality across different lenders</p>
+                        </div>
+                    </div>
+                    
+                    <div class="insight-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-number success">0.08%</div>
+                            <div class="highlight-label">Credila NPA Rate</div>
+                            <div class="highlight-period">Excellent</div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-number warning">13.86%</div>
+                            <div class="highlight-label">PNB NPA Rate</div>
+                            <div class="highlight-period">High Risk</div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-number">₹26.28L</div>
+                            <div class="highlight-label">Avg NBFC Ticket Size</div>
+                            <div class="highlight-period">Premium</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="insight-card">
+                    <div class="insight-header">
+                        <div class="insight-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <div class="insight-title">
+                            <h3>Regional Distribution</h3>
+                            <p>Geographic spread of loan distribution</p>
+                        </div>
+                    </div>
+                    
+                    <div class="insight-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-number">54%</div>
+                            <div class="highlight-label">Southern States</div>
+                            <div class="highlight-period">Dominant</div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-number warning">Low</div>
+                            <div class="highlight-label">North Eastern States</div>
+                            <div class="highlight-period">Under-served</div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-number danger">35%</div>
+                            <div class="highlight-label">Application Rejection Rate</div>
+                            <div class="highlight-period">High</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loan Application Guide -->
+    <section class="application-guide-section">
+        <div class="container">
+            <h2 class="section-title">How to Apply for Education Loans</h2>
+            <div class="guide-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Check Eligibility</h3>
+                    <p>Verify your course, institution, and financial requirements meet the loan criteria</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Choose Lender</h3>
+                    <p>Compare interest rates, processing fees, and terms from different lenders</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Gather Documents</h3>
+                    <p>Prepare admission letter, fee structure, income proof, and identity documents</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Submit Application</h3>
+                    <p>Fill the application form online or visit the bank branch</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <h3>Loan Disbursement</h3>
+                    <p>After approval, the loan amount is disbursed directly to your institution</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Loan Comparison Table -->
+    <section class="loan-comparison-section">
+        <div class="container">
+            <h2 class="section-title">Detailed Loan Comparison</h2>
+            <div class="comparison-table-container">
+                <table class="loan-comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Lender Type</th>
+                            <th>Interest Rate</th>
+                            <th>Processing Fee</th>
+                            <th>Max Amount</th>
+                            <th>Collateral</th>
+                            <th>Processing Time</th>
+                            <th>NPA Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>SBI (PSB)</td>
+                            <td>8.15% - 11.15%</td>
+                            <td>₹1,000</td>
+                            <td>₹1.5Cr</td>
+                            <td>Required >₹7.5L</td>
+                            <td>15-30 days</td>
+                            <td>High</td>
+                        </tr>
+                        <tr>
+                            <td>ICICI Bank</td>
+                            <td>10.85% - 12%</td>
+                            <td>₹1,500</td>
+                            <td>₹1Cr</td>
+                            <td>Required</td>
+                            <td>7-15 days</td>
+                            <td>5.78%</td>
+                        </tr>
+                        <tr>
+                            <td>Credila (NBFC)</td>
+                            <td>10.5% - 13%</td>
+                            <td>₹2,000</td>
+                            <td>₹75L</td>
+                            <td>Required >₹10L</td>
+                            <td>3-7 days</td>
+                            <td>0.08%</td>
+                        </tr>
+                        <tr>
+                            <td>Avanse (NBFC)</td>
+                            <td>9.5% - 14%</td>
+                            <td>₹2,500</td>
+                            <td>₹50L</td>
+                            <td>Required >₹10L</td>
+                            <td>3-7 days</td>
+                            <td>0.53%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>EduAccess India</h3>
+                    <p>Empowering students with access to quality education through comprehensive information, tools, and resources.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="scholarships.html">Scholarships</a></li>
+                        <li><a href="loans.html">Education Loans</a></li>
+                        <li><a href="pathways.html">Education Pathways</a></li>
+                        <li><a href="resources.html">Interactive Tools</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@eduaccessindia.org</p>
+                    <p>Phone: +91-98765-43210</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 EduAccess India. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="loans-calculator.js"></script>
+    <script>
+        // Tab functionality for loan comparison
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetTab = this.getAttribute('data-tab');
+                    
+                    // Remove active class from all buttons and contents
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    tabContents.forEach(c => c.classList.remove('active'));
+                    
+                    // Add active class to clicked button and corresponding content
+                    this.classList.add('active');
+                    const targetContent = document.getElementById(targetTab + '-content');
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                    }
+                });
+            });
+
+            // Smooth scrolling for dropdown navigation links
+            const dropdownLinks = document.querySelectorAll('.dropdown-menu a[href^="#"]');
+            
+            dropdownLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
