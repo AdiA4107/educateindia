@@ -327,4 +327,4 @@ For support, partnerships, or questions:
 
 **Built with ❤️ for Education Access Across India 🇮🇳**
 
-*Empowering students, one scholarship at a time* 
+*Empowering students, one scholarship at a time* # educateindia
