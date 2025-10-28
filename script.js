@@ -1,3 +1,34 @@
+// Mission Statement Audio Player
+document.addEventListener('DOMContentLoaded', function() {
+    const missionBtn = document.getElementById('missionBtn');
+    const missionAudio = document.getElementById('missionAudio');
+    
+    if (missionBtn && missionAudio) {
+        missionBtn.addEventListener('click', function() {
+            const icon = this.querySelector('i');
+            
+            if (missionAudio.paused) {
+                // Play audio
+                missionAudio.play();
+                icon.className = 'fas fa-pause';
+                this.innerHTML = '<i class="fas fa-pause"></i> Pause Mission Statement';
+            } else {
+                // Pause audio
+                missionAudio.pause();
+                icon.className = 'fas fa-play';
+                this.innerHTML = '<i class="fas fa-play"></i> Listen to our Mission Statement';
+            }
+        });
+        
+        // Reset button when audio ends
+        missionAudio.addEventListener('ended', function() {
+            const icon = missionBtn.querySelector('i');
+            icon.className = 'fas fa-play';
+            missionBtn.innerHTML = '<i class="fas fa-play"></i> Listen to our Mission Statement';
+        });
+    }
+});
+
 // Mobile Navigation Toggle
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');

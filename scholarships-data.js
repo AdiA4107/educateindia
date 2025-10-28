@@ -28,7 +28,7 @@ class ScholarshipsManager {
             this.loadScholarshipsInBackground();
             
             this.setupEventListeners();
-            this.updateCounts();
+            // this.updateCounts();
             this.renderScholarships();
             this.addStateFilter();
             this.renderStateScholarships();
@@ -73,7 +73,7 @@ class ScholarshipsManager {
             console.log('Additional CSV scholarships:', additionalScholarships.length);
             
             // Update the display with new data
-            this.updateCounts();
+            // this.updateCounts();
             this.renderScholarships();
             
         } catch (error) {
@@ -617,7 +617,7 @@ class ScholarshipsManager {
         console.log('State scholarships after filtering:', this.filteredScholarships.filter(sch => sch.isStateScholarship).length);
         
         // Update counts and render
-        this.updateCounts();
+        // this.updateCounts();
         this.renderScholarships();
         this.renderStateScholarships();
     }
@@ -712,7 +712,7 @@ class ScholarshipsManager {
         // Update display counts with new meaningful statistics
         document.getElementById('totalScholarships').textContent = total;
         document.getElementById('allCount').textContent = total;
-        document.getElementById('govtCount').textContent = statesCovered;
+        document.getElementById('governmentCount').textContent = statesCovered;
         document.getElementById('foundationCount').textContent = total;
         document.getElementById('corporateCount').textContent = formattedAmount;
         
@@ -1058,6 +1058,9 @@ class ScholarshipsManager {
     
     formatDeadline(deadline) {
         if (!deadline) return 'Rolling/Check Website';
+        
+        // Check if the date is valid
+        if (isNaN(deadline.getTime())) return 'Rolling/Check Website';
         
         const today = new Date();
         const daysUntilDeadline = Math.ceil((deadline - today) / (1000 * 60 * 60 * 24));
