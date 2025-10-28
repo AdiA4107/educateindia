@@ -112,7 +112,7 @@ body {
 }
 
 .btn-outline {
-    background: transparent;
+    background: white;
     color: #34499B;
     border: 2px solid #34499B;
     padding: 8px 20px;
@@ -306,7 +306,7 @@ body {
 
 /* Hero Section Styles */
 .hero {
-    background: #ffffff;
+    background: linear-gradient(135deg, #34499B 0%, #2a3d7a 100%);
     color: white;
     text-align: center;
     padding: 140px 0 80px; /* extra top space under fixed navbar */
@@ -315,13 +315,7 @@ body {
 }
 
 .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(52, 73, 155, 0.1) 0%, rgba(0, 0, 0, 0.2) 100%);
+    display: none;
 }
 
 .hero-container {
@@ -345,7 +339,7 @@ body {
     font-weight: 700;
     margin-bottom: 1.5rem;
     line-height: 1.2;
-    color: #333333;
+    color: white;
 }
 
 .hero-description {
@@ -353,7 +347,7 @@ body {
     margin-bottom: 2rem;
     opacity: 0.9;
     line-height: 1.6;
-    color: #666666;
+    color: white;
 }
 
 .hero-buttons {
